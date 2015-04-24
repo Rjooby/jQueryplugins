@@ -30,7 +30,6 @@ $.Thumbnails = function (el) {
 };
 
 $.Thumbnails.prototype.activate = function ($img) {
-	console.log("y")
 	this.$featureDiv.html($img.clone());
 };
 
@@ -38,8 +37,6 @@ $.Thumbnails.prototype.fillGutterImages = function () {
 	this.$gutterImages.children().remove();
 	var that = this;
 	this.$images.each(function (idx, element) {
-		console.log(idx);
-		console.log(that.gutterIdx)
 		if (idx< that.gutterIdx || idx >= that.gutterIdx + 5) {
 			return;
 		}
